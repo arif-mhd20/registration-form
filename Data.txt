@@ -1,0 +1,1 @@
+{"fname":"asad","lname":"md","gender":"Male","birthday":"2021-06-02","Religion":"ISLAM","w3review":"\r\n        ","phone":"","email":"khan.asad2011@gmail.com","homepage":"","Username":"asad","pwd":"1234"}

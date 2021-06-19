@@ -1,0 +1,35 @@
+[10:38 AM] MIR MD. KAWSUR
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP Basic</title>
+</head>
+<body>
+<h1>PHP Basic</h1>
+<?php
+$fullNameErr = "";
+$fullName = "";
+if($_SERVER['REQUEST_METHOD'] === "POST") {​​
+if(empty($_POST['fullName'])) {​​
+$fullNameErr = "value is empty";
+}​​
+else {​​
+$fullName = test_input($_POST['fullName']);
+}​​
+}​​
+function test_input($data) {​​
+$data = trim($data);
+$data = stripslashes($data);
+$data = htmlspecialchars($data);
+return $data;
+}​​
+?>
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="POST">
+<label for="name">Name:</label>
+<input type="text" name="fullName" id="name" value="<?php echo $fullName; ?>">
+<span style="color: red;"><?php echo $fullNameErr; ?></span>
+<input type="submit" name="submit" value="Submit">
+</form>
+</body>
+</html>
+
